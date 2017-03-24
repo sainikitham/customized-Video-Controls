@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div id="ovideo">
+    <video id="my_video" src="Tom.mp4" style="width:550px;height:400px;"autoplay="true" ontimeupdate="seektime()"></video>
+    </div>
+    <div id="video_control_bar">
+    <i class="fa fa-pause" style="font-size:22px;margin-top:6px;" onclick="playpause(this,'my_video')"></i>
+    <div id="crntduration"></div>
+    <input id="seekslider" type="range" min="0" max="100" value="0" step="1" style="width:250px;"onchange="seekup()">
+    <div id="totduration"></div>&nbsp;&nbsp;
+    <div style="top:5px;position: absolute;"><i onclick="volumechange()" id="volume" class="fa fa-volume-up" style="font-size:30px;"></i></div>
+    <input id="seeksliderv" type="range" min="0" max="100" value="100" onchange="slidervolume()" step="1" style="width:100px;margin-left:35px;">
+    <div id="screensize" onclick="changescreen()"></div>
+    </div>
+  </body>
+</html>
